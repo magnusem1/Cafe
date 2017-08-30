@@ -32,5 +32,27 @@ namespace Cafe.Tests
             //Assert
             Assert.AreEqual("stærk", Styrke);
         }
+
+        [TestMethod()]
+        public void TestKaffeListe()
+        {
+            var kaffeliste = new List<IMælk>();
+
+            var Cortado = new Cortado();
+            var Latte = new Latte();
+            var SortKaffe = new SortKaffe();
+            kaffeliste.Add(Cortado);
+            kaffeliste.Add(Latte);
+
+            foreach (var kaffeitem in kaffeliste)
+            {
+                if (kaffeitem is Cortado)
+                {
+                    var localCortado = kaffeitem as Cortado;
+                }
+                kaffeitem.MlMælk();
+            }
+        }
+    }
     }
 }

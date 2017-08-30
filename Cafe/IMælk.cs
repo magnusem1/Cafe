@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Cafe
 {
-    interface IMælk
+    public interface IMælk
     {
         int MlMælk();
 
