@@ -36,6 +36,8 @@ namespace Cafe.Tests
         [TestMethod()]
         public void TestKaffeListe()
         {
+
+            //Arrange
             var kaffeliste = new List<IMælk>();
 
             var Cortado = new Cortado();
@@ -43,16 +45,25 @@ namespace Cafe.Tests
             var SortKaffe = new SortKaffe();
             kaffeliste.Add(Cortado);
             kaffeliste.Add(Latte);
+            //kaffeliste.Add(SortKaffe);
 
+
+            //Act
+            int total = 0;
             foreach (var kaffeitem in kaffeliste)
             {
-                if (kaffeitem is Cortado)
-                {
-                    var localCortado = kaffeitem as Cortado;
-                }
-                kaffeitem.MlMælk();
+                total += kaffeitem.MlMælk();
+                //if (kaffeitem is Cortado)
+                //{
+                //    var localCortado = kaffeitem as Cortado;
+                //}
+                //kaffeitem.MlMælk();
+
+            
             }
+
+            //Assert
+            Assert.AreEqual(145, total);
         }
-    }
     }
 }
