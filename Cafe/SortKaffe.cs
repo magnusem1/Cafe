@@ -10,7 +10,25 @@ namespace Cafe
     {
         public override int Pris()
         {
-            return 20;
+            int prismedrabat = 20 - Rabat;
+
+            if (prismedrabat <= 0)
+            {
+                throw new ArgumentException("Uppss du gav for meget rabat");
+            }
+
+            return prismedrabat;
+        }
+
+        public SortKaffe()
+        {
+
+        }
+
+        public SortKaffe(int rabat)
+            :base(rabat)
+        {
+
         }
     }
 }

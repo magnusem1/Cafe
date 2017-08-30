@@ -13,5 +13,21 @@ namespace Cafe
         {
             return "stærk";
         }
+        /// <summary>
+        /// Rabat der gives på Kaffe
+        /// </summary>
+        public int Rabat { get; set; }
+
+
+
+        public Kaffe()
+        {
+            this.Rabat = 0;
+        }
+
+        public Kaffe(int rabat)
+        {
+            this.Rabat = rabat;
+        }
     }
 }
