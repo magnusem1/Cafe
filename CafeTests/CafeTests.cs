@@ -12,21 +12,21 @@ namespace Cafe.Tests
     public class CafeTests
     {
         [TestMethod()]
-        public void PrisTestKaffe()
+        public void PrisTestSortKaffe()
         {
             //Arrange
-            var Cafe = new ();
+            var SortKaffe = new SortKaffe();
             //Act
-            int pris = Cafe.Pris();
+            int pris = SortKaffe.Pris();
             //Assert
             Assert.AreEqual(20, pris);
         }
 
         [TestMethod()]
-        public void StyrkeTestKaffe()
+        public void StyrkeTestSortKaffe()
         {
             //Arrange
-            var cafe = new Kaffe();
+            var cafe = new SortKaffe();
             //Act
             string Styrke = cafe.Styrke();
             //Assert
